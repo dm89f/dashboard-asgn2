@@ -17,10 +17,7 @@ function Knowledge() {
     'Archived',
   ]
 
-  let teams = [
-    'Marketing',
-    'Sales'
-  ]
+
   
   const handleCategClick = (category)=>{
     setSearchParams({team, category})
