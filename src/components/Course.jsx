@@ -6,7 +6,7 @@ import CourseCateg from './utils/CourseCateg';
 function Course({course}) {
   return (
     <div className='p-2'>
-      <div className='bg-white shadow-sm'>
+      <div className='border-2 border-brown-light hover:border-blue-700 bg-white shadow-sm md:shadow-lg'>
 
         {/* course card header */}
 
