@@ -18,6 +18,10 @@ function Sidebar({sidebarActive, toggleSidebar}) {
     backgroundColor:'#584328'
   }
 
+  const handleNavLinkClick = ()=>{
+    toggleSidebar();
+  }
+
 
   return (
     <section 
@@ -34,42 +38,54 @@ function Sidebar({sidebarActive, toggleSidebar}) {
           </div>
 
           {/* sidenav liks */}
-          <NavLink to={'/dashboard'}  className={`w-full flex items-center space-x-3 px-1 py-1 hover:bg-brown-light my-1 ${({isActive})=>{ return isActive?'bg-brown-light':undefined }}`}
+          <NavLink 
+            onClick={handleNavLinkClick}
+            to={'/dashboard'}  className={`w-full flex items-center space-x-3 px-1 py-1 hover:bg-brown-light my-1 ${({isActive})=>{ return isActive?'bg-brown-light':undefined }}`}
             style={({ isActive }) =>
               isActive ? activeNavLink : undefined
             }
           >
             <FiHome size={20}/> <p className=''>Dashboard</p>
           </NavLink>
-          <NavLink to={'/knowledge'} className='w-full flex items-center space-x-3 px-1 py-1 hover:bg-brown-light my-1'
+          <NavLink 
+            onClick={handleNavLinkClick}
+            to={'/knowledge'} className='w-full flex items-center space-x-3 px-1 py-1 hover:bg-brown-light my-1'
             style={({ isActive }) =>
               isActive ? activeNavLink : undefined
             }
           >
             <SlGraduation size={20}/> <p className=''>Knowledge</p>
           </NavLink>
-          <NavLink to={'/members'} className='w-full flex items-center space-x-3 px-1 py-1 hover:bg-brown-light my-1'
+          <NavLink 
+            onClick={handleNavLinkClick}
+            to={'/members'} className='w-full flex items-center space-x-3 px-1 py-1 hover:bg-brown-light my-1'
             style={({ isActive }) =>
               isActive ? activeNavLink : undefined
             }
           >
             <FiUsers size={20}/> <p className=''>Members</p>
           </NavLink>
-          <NavLink to={'/teams'} className='w-full flex items-center space-x-3 px-1 py-1 hover:bg-brown-light my-1'
+          <NavLink 
+            onClick={handleNavLinkClick}
+            to={'/teams'} className='w-full flex items-center space-x-3 px-1 py-1 hover:bg-brown-light my-1'
             style={({ isActive }) =>
               isActive ? activeNavLink : undefined
             }
           >
             <MdOutlineGroupWork size={20}/> <p className=''>Teams</p>
           </NavLink>
-          <NavLink to={'/vault'} className='w-full flex items-center space-x-3 px-1 py-1 hover:bg-brown-light my-1'
+          <NavLink 
+            onClick={handleNavLinkClick}
+            to={'/vault'} className='w-full flex items-center space-x-3 px-1 py-1 hover:bg-brown-light my-1'
             style={({ isActive }) =>
               isActive ? activeNavLink : undefined
             }
           >
             <CiVault size={20}/> <p className=''>Vault</p>
           </NavLink>
-          <NavLink to={'/chat'} className='w-full flex items-center space-x-3 px-1 py-1 hover:bg-brown-light my-1'
+          <NavLink 
+            onClick={handleNavLinkClick}
+            to={'/chat'} className='w-full flex items-center space-x-3 px-1 py-1 hover:bg-brown-light my-1'
             style={({ isActive }) =>
               isActive ? activeNavLink : undefined
             }
