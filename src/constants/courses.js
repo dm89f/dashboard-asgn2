@@ -5,6 +5,7 @@ export const courses=[
     tot_lessons:'1',
     tot_duration:'13',
     category:'draft',
+    image:'/images/courses/web-design.jpg',
     teams:['Marketing']
   },
   {
@@ -13,6 +14,7 @@ export const courses=[
     tot_lessons:'3',
     tot_duration:'25',
     category:'Archived',
+    image:'/images/courses/web-design.jpg',
     teams:['Sales','Marketing']
   },
   {
@@ -21,6 +23,7 @@ export const courses=[
     tot_lessons:'6',
     tot_duration:'15',
     category:'Live',
+    image:'/images/courses/web-design.jpg',
     teams:['Sales']
   },
   {
@@ -29,6 +32,7 @@ export const courses=[
     tot_lessons:'3',
     tot_duration:'25',
     category:'Live',
+    image:'/images/courses/SEO.jpg',
     teams:['Sales']
   },
   {
@@ -37,6 +41,7 @@ export const courses=[
     tot_lessons:'2',
     tot_duration:'10',
     category:'draft',
+    image:'/images/courses/sales.jpg',
     teams:['Marketing', 'Sales']
   },
   {
@@ -45,6 +50,7 @@ export const courses=[
     tot_lessons:'5',
     tot_duration:'30',
     category:'draft',
+    image:'/images/courses/training.jpg',
     teams:['sales']
   },
   {
@@ -53,6 +59,7 @@ export const courses=[
     tot_lessons:'7',
     tot_duration:'35',
     category:'draft',
+    image:'/images/courses/bargain.jpg',
     teams:['Marketing']
   },
   

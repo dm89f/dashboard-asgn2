@@ -15,7 +15,7 @@ function Dashboard({toggleSidebar}) {
           <p className='py-2 border-b-2 hover:border-brown' >ARCHIVED</p>
         </div>
         
-        <section className='mt-5'>
+        <section className='mt-5 grid grid-flow-row-dense md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
           {
             courses&&courses.map((course)=>{
               return(
