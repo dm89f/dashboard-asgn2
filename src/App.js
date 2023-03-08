@@ -11,10 +11,12 @@ function App() {
   }
 
   return (
-    <div className="w-screen h-screen flex relative">
+    <div className="w-screen min-h-screen flex relative">
       <Sidebar sidebarActive={sidebarActive} toggleSidebar={toggleSidebar} />
+        
         {/* overlay */}
         <div onClick={()=>{setSidebarActive(false)}} className={`overlay md:hidden ${!sidebarActive&&"hidden"}`} />
+
       <Dashboard toggleSidebar={toggleSidebar}/>
     </div>
   );

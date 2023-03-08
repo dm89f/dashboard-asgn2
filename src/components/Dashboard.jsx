@@ -5,7 +5,7 @@ import Course from './Course'
 
 function Dashboard({toggleSidebar}) {
   return (
-    <section className='w-full ml-auto bg-red-100 h-screen md:w-9/12 xl:w-10/12'>
+    <section className='w-full ml-auto bg-red-100 min-h-screen md:w-9/12 xl:w-10/12'>
       <Header toggleSidebar={toggleSidebar}/>
       <main className='px-2 md:px-5 lg:px-10 mt-10'>
         <div className='flex items-center space-x-2 text-md lg:space-x-5 lg:text-xl'>

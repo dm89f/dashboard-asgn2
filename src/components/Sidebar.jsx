@@ -17,7 +17,7 @@ function Sidebar({sidebarActive, toggleSidebar}) {
 
   return (
     <section 
-      className={`transition absolute bg-brown-dark sm:shadow-lg text-white h-screen  
+      className={`transition fixed bg-brown-dark sm:shadow-lg text-white h-screen  
         w-64 -left-64 px-3 xl:px-5 md:left-0  ${sidebarActive&&"translate-x-64"}
         md:translate-x-0 md:block md:w-3/12 xl:w-2/12 z-10 md:z-0`}>
       <div className='w-full h-full flex flex-col '>
