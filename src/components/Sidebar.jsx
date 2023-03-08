@@ -4,23 +4,30 @@ import {SlGraduation} from 'react-icons/sl'
 import {MdOutlineGroupWork} from 'react-icons/md';
 import {TbMessage} from 'react-icons/tb'
 import {CiVault} from 'react-icons/ci'
-import {AiOutlineSetting} from 'react-icons/ai'
+import {AiOutlineSetting, AiOutlineCloseCircle} from 'react-icons/ai'
 import {BiBuildings} from 'react-icons/bi'
 import {FaUserCircle} from 'react-icons/fa'
 
 
-function Sidebar() {
 
-  let active = true;
+function Sidebar({sidebarActive, toggleSidebar}) {
+
+
+
 
   return (
-    <section className={`transition absolute bg-brown-dark text-white h-screen  w-64 -left-64 px-3 xl:px-5 md:left-0  ${active&&"translate-x-64"}
-    md:translate-x-0 md:block md:w-3/12 xl:w-2/12 `}>
+    <section 
+      className={`transition absolute bg-brown-dark sm:shadow-lg text-white h-screen  
+        w-64 -left-64 px-3 xl:px-5 md:left-0  ${sidebarActive&&"translate-x-64"}
+        md:translate-x-0 md:block md:w-3/12 xl:w-2/12 z-10 md:z-0`}>
       <div className='w-full h-full flex flex-col '>
         
         {/* sidebar Upper */}
         <div className='text-lg lg:text-xl'>
-          <h3 className='my-5 text-xl 2xl:text-3xl font-genos '>Remote SalesFuel</h3>
+          <div className='flex items-center justify-between'>
+            <h3 className='my-5 text-xl 2xl:text-3xl font-genos '>Remote SalesFuel</h3>
+            <AiOutlineCloseCircle className='md:hidden' size={20} onClick={toggleSidebar}/>
+          </div>
           <div className='w-full flex items-center space-x-3 px-1 py-1 hover:bg-brown-light my-1'>
             <FiHome size={20}/> <p className=''>Dashboard</p>
           </div>
