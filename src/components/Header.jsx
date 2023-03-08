@@ -1,19 +1,21 @@
 import React from 'react'
 import {SlOptionsVertical} from 'react-icons/sl'
 import {FiMenu} from 'react-icons/fi'
+import { useLocation } from 'react-router-dom'
 
 function Header({toggleSidebar}) {
 
-  
+  let location = useLocation()
+  let currentPath = location.pathname.split('/')[1].toUpperCase();
 
   return (
-    <header className='px-2 md:px-5 lg:px-10 bg-white w-full py-3'>
+    <header className='px-2 md:px-5 lg:px-10 bg-white w-full py-3 shadow-md'>
       <div className='flex items-center justify-between'>
         
         {/* leftside Header */}
         <div className='flex items-center space-x-2'>
           <FiMenu onClick={toggleSidebar} className='md:hidden' size={25}/>
-          <h3 className='text-lg md:text-2xl'>Knowledge</h3>
+          <h3 className='text-lg md:text-2xl'>{currentPath}</h3>
         </div>
 
         {/* rightside Header */}

@@ -6,14 +6,14 @@ import Dashboard from "./DashboardLayout";
 
 function AppLayout() {
 
-  const [sidebarActive, setSidebarActive] = useState(true);
+  const [sidebarActive, setSidebarActive] = useState(false);
 
   const toggleSidebar = ()=>{
     setSidebarActive(!sidebarActive)
   }
 
   return (
-    <div className="w-screen min-h-screen flex relative">
+    <div className="w-screen bg-gray-100 min-h-screen flex relative">
       <Sidebar sidebarActive={sidebarActive} toggleSidebar={toggleSidebar} />
         
         {/* overlay */}

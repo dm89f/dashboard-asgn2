@@ -2,6 +2,7 @@ import React from "react";
 import AppLayout from "./Layouts/AppLayout";
 import {Routes, Route} from 'react-router-dom'
 import Knowledge from "./components/knowledge";
+import OtherPageLayout from './Layouts/OtherPageLayout'
 
 function App() {
 
@@ -10,13 +11,13 @@ function App() {
     <Routes>
 
       <Route path="/" element={<AppLayout/>}>
-        <Route path="/dashboard" element={<div>dashboard</div>}/>
+        <Route path="/dashboard" element={<OtherPageLayout/>}/>
         <Route path="/Knowledge" element={<Knowledge/>}/>
-        <Route path="/Members" element={<div>members</div>}/>
-        <Route path="/teams" element={<div>teams</div>}/>
-        <Route path="/vault" element={<div>Members</div>}/>
-        <Route path="/chat" element={<div>chat</div>}/>
-        <Route path="*" element={<div>Error Page</div>} />
+        <Route path="/Members" element={<OtherPageLayout/>}/>
+        <Route path="/teams" element={<OtherPageLayout/>}/>
+        <Route path="/vault" element={<OtherPageLayout/>}/>
+        <Route path="/chat" element={<OtherPageLayout/>}/>
+        <Route path="*" element={<OtherPageLayout/>} />
       </Route>
     </Routes>
   );
