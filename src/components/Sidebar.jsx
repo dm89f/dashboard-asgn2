@@ -14,13 +14,13 @@ function Sidebar() {
   let active = true;
 
   return (
-    <section className={`transition absolute bg-brown-dark text-white h-screen  w-64 -left-64 px-3 md:left-0  ${active&&"translate-x-64"}
-    md:translate-x-0 md:block md:w-3/12 xl:w-2/12 xl:px-5`}>
+    <section className={`transition absolute bg-brown-dark text-white h-screen  w-64 -left-64 px-3 xl:px-5 md:left-0  ${active&&"translate-x-64"}
+    md:translate-x-0 md:block md:w-3/12 xl:w-2/12 `}>
       <div className='w-full h-full flex flex-col '>
         
         {/* sidebar Upper */}
         <div className='text-lg lg:text-xl'>
-          <h3 className='my-5 text-xl 2xl:text-2xl font-bold '>Remote SalesFuel</h3>
+          <h3 className='my-5 text-xl 2xl:text-3xl font-genos '>Remote SalesFuel</h3>
           <div className='w-full flex items-center space-x-3 px-1 py-1 hover:bg-brown-light my-1'>
             <FiHome size={20}/> <p className=''>Dashboard</p>
           </div>

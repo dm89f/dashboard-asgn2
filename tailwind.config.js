@@ -11,6 +11,9 @@ module.exports = {
           DEFAULT:'#2f1400',
           dark:'#2d1401'
         }
+      },
+      fontFamily:{
+        'genos':['Genos']
       }
     },
   },
