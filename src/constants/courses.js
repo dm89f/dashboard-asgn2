@@ -1,3 +1,6 @@
+
+
+// courses for knowledge page
 export const courses=[
   {
     title:'xyz',

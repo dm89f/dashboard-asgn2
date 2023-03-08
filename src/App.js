@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import AppLayout from "./Layouts/AppLayout";
 import {Routes, Route} from 'react-router-dom'
 import Knowledge from "./components/knowledge";
