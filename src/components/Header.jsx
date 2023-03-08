@@ -20,7 +20,7 @@ function Header({toggleSidebar}) {
 
         {/* rightside Header */}
         <div className='flex items-center space-x-2'>
-          <button className='px-3 py-2 bg-blue-800 text-white'>Create Course</button>
+          <button className='px-3 py-2 hover:bg-blue-600 bg-blue-800 text-white'>Create Course</button>
           <div className='p-1 rounded-full border-2 hover:border-gray-500'>
             {/* <div 
               style={{backgroundImage:`url('/profile-img.jpeg)`}} 
