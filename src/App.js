@@ -1,24 +1,24 @@
 import React, { useState } from "react";
-import Sidebar from "./components/Sidebar";
-import Dashboard from "./components/Dashboard";
+import AppLayout from "./Layouts/AppLayout";
+import {Routes, Route} from 'react-router-dom'
+import Knowledge from "./components/knowledge";
 
 function App() {
 
-  const [sidebarActive, setSidebarActive] = useState(true);
-
-  const toggleSidebar = ()=>{
-    setSidebarActive(!sidebarActive)
-  }
 
   return (
-    <div className="w-screen min-h-screen flex relative">
-      <Sidebar sidebarActive={sidebarActive} toggleSidebar={toggleSidebar} />
-        
-        {/* overlay */}
-        <div onClick={()=>{setSidebarActive(false)}} className={`overlay md:hidden ${!sidebarActive&&"hidden"}`} />
+    <Routes>
 
-      <Dashboard toggleSidebar={toggleSidebar}/>
-    </div>
+      <Route path="/" element={<AppLayout/>}>
+        <Route path="/dashboard" element={<div>dashboard</div>}/>
+        <Route path="/Knowledge" element={<Knowledge/>}/>
+        <Route path="/Members" element={<div>members</div>}/>
+        <Route path="/teams" element={<div>teams</div>}/>
+        <Route path="/vault" element={<div>Members</div>}/>
+        <Route path="/chat" element={<div>chat</div>}/>
+        <Route path="*" element={<div>Error Page</div>} />
+      </Route>
+    </Routes>
   );
 }
 

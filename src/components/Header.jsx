@@ -3,6 +3,9 @@ import {SlOptionsVertical} from 'react-icons/sl'
 import {FiMenu} from 'react-icons/fi'
 
 function Header({toggleSidebar}) {
+
+  
+
   return (
     <header className='px-2 md:px-5 lg:px-10 bg-white w-full py-3'>
       <div className='flex items-center justify-between'>

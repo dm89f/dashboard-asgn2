@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom';
 import {FiHome, FiUsers} from 'react-icons/fi'
 import {SlGraduation} from 'react-icons/sl'
 import {MdOutlineGroupWork} from 'react-icons/md';
@@ -13,6 +14,9 @@ import {FaUserCircle} from 'react-icons/fa'
 function Sidebar({sidebarActive, toggleSidebar}) {
 
 
+  let activeNavLink = {
+    backgroundColor:'#584328'
+  }
 
 
   return (
@@ -28,30 +32,58 @@ function Sidebar({sidebarActive, toggleSidebar}) {
             <h3 className='my-5 text-xl 2xl:text-3xl font-genos '>Remote SalesFuel</h3>
             <AiOutlineCloseCircle className='md:hidden' size={20} onClick={toggleSidebar}/>
           </div>
-          <div className='w-full flex items-center space-x-3 px-1 py-1 hover:bg-brown-light my-1'>
+
+          {/* sidenav liks */}
+          <NavLink to={'/dashboard'}  className={`w-full flex items-center space-x-3 px-1 py-1 hover:bg-brown-light my-1 ${({isActive})=>{ return isActive?'bg-brown-light':undefined }}`}
+            style={({ isActive }) =>
+              isActive ? activeNavLink : undefined
+            }
+          >
             <FiHome size={20}/> <p className=''>Dashboard</p>
-          </div>
-          <div className='w-full flex items-center space-x-3 px-1 py-1 hover:bg-brown-light my-1'>
+          </NavLink>
+          <NavLink to={'/knowledge'} className='w-full flex items-center space-x-3 px-1 py-1 hover:bg-brown-light my-1'
+            style={({ isActive }) =>
+              isActive ? activeNavLink : undefined
+            }
+          >
             <SlGraduation size={20}/> <p className=''>Knowledge</p>
-          </div>
-          <div className='w-full flex items-center space-x-3 px-1 py-1 hover:bg-brown-light my-1'>
+          </NavLink>
+          <NavLink to={'/members'} className='w-full flex items-center space-x-3 px-1 py-1 hover:bg-brown-light my-1'
+            style={({ isActive }) =>
+              isActive ? activeNavLink : undefined
+            }
+          >
             <FiUsers size={20}/> <p className=''>Members</p>
-          </div>
-          <div className='w-full flex items-center space-x-3 px-1 py-1 hover:bg-brown-light my-1'>
+          </NavLink>
+          <NavLink to={'/teams'} className='w-full flex items-center space-x-3 px-1 py-1 hover:bg-brown-light my-1'
+            style={({ isActive }) =>
+              isActive ? activeNavLink : undefined
+            }
+          >
             <MdOutlineGroupWork size={20}/> <p className=''>Teams</p>
-          </div>
-          <div className='w-full flex items-center space-x-3 px-1 py-1 hover:bg-brown-light my-1'>
+          </NavLink>
+          <NavLink to={'/vault'} className='w-full flex items-center space-x-3 px-1 py-1 hover:bg-brown-light my-1'
+            style={({ isActive }) =>
+              isActive ? activeNavLink : undefined
+            }
+          >
             <CiVault size={20}/> <p className=''>Vault</p>
-          </div>
-          <div className='w-full flex items-center space-x-3 px-1 py-1 hover:bg-brown-light my-1'>
+          </NavLink>
+          <NavLink to={'/chat'} className='w-full flex items-center space-x-3 px-1 py-1 hover:bg-brown-light my-1'
+            style={({ isActive }) =>
+              isActive ? activeNavLink : undefined
+            }
+          >
             <TbMessage size={20}/> <p className=''>Chat</p>
-          </div>
+          </NavLink>
         </div>
 
 
         {/* sidebar bottom */}
         <div className='mt-auto mb-5'>
-          <div className='w-full flex items-center space-x-3 px-1 py-1 hover:bg-brown-light my-1'>
+          <div className='w-full flex items-center space-x-3 px-1 py-1 hover:bg-brown-light my-1'
+
+          >
             <AiOutlineSetting size={20}/> <p className='text-xl'>Settings</p>
           </div>
           <div className='w-full flex items-center space-x-3 px-1 py-1 hover:bg-brown-light my-1'>
